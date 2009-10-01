@@ -74,8 +74,8 @@ Rails::Initializer.run do |config|
   old_verbose = $VERBOSE
   $VERBOSE = nil
 
-  SITE_NAME = '* SITE NAME HERE *'
-  SITE_DOMAIN = 'changeme.com'
+  SITE_NAME = 'Intranet Callis'
+  SITE_DOMAIN = 'callis.com.br'
   SITE_URL = "http://www.#{SITE_DOMAIN}/"
   SITE_EMAIL = "contact@#{SITE_DOMAIN}"
   SITE_META_KEYWORDS = ""
