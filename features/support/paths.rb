@@ -21,11 +21,11 @@ module NavigationHelpers
     when /the admin list of pages/
       admin_pages_path
     when /the Home page/
-      '/pages/home'
+      '/paginas/home'
     when /the About Us page/
-      '/pages/about-us'
+      '/paginas/about-us'
     when /the Contact page/
-      '/pages/contact'
+      '/paginas/contato'
 
     # Add more mappings here.
     # Here is a more fancy example:

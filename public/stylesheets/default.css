@@ -1,3 +1,40 @@
-@import url("plugins/crossbrowser.css");
-
 * {margin:0;padding:0;outline:none;}
+img {border:none;}
+
+a {color:#00CCCC;text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+h1 {}
+h2 {font-size:28px;font-weight:normal;border-bottom:1px solid #C7C7C7;margin-bottom:10px;padding-bottom:10px;}
+h3 {font-size:16px;}
+
+body {background:white url(../images/bg/body.gif) repeat-x;color:#C7C7C7;font:12px Arial, Verdana, Tahoma, sans-serif;}
+
+#main {margin:0 auto;width:920px;}
+
+/*Top*/
+#top {border-bottom:1px solid #C7C7C7;margin-bottom:20px;padding-bottom:20px;height:140px;}
+#top img {float:left;}
+#top p {text-align:right;margin:15px 0 105px 0;}
+#top ul {float:right;}
+#top ul li {display:inline;font-size:20px;margin-left:20px;}
+#top ul li a {color:#C7C7C7;}
+#top ul li a:hover {color:#00CCCC;text-decoration:none;}
+
+#banner {border-bottom:1px solid #C7C7C7;margin-bottom:20px;padding-bottom:20px;}
+
+/*Home*/
+#events {float:left;width:350px;margin-right:20px;}
+#events li {border-bottom:1px solid #C7C7C7;margin-bottom:10px;list-style:none;height:40px;}
+#events li a {color:black;}
+#events li a:hover {color:#00CCCC;text-decoration:none;}
+#events li a:hover small {color:#666;}
+#events li small {font-size:12px;float:left;width:100px;border-right:1px solid #C7C7C7;margin-right:10px;padding:10px 10px 0 0;height:20px;}
+#events li h3 {padding-top:8px;}
+
+#births {float:left;width:250px;margin-right:20px;}
+
+#procedures {float:right;width:280px;}
+
+/*Footer*/
+#footer {float:left;border-top:1px solid #C7C7C7;margin-top:20px;padding-top:20px;text-align:center;width:920px;}

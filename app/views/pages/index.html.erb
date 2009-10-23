@@ -1,7 +1,36 @@
-<h1>Pages</h1>
-
-<ul>
-	<% @pages.each do |page| %>
-	<li><%= link_to page.name, page_path(page.permalink) %></li>
-	<% end %>
-</ul>
+<%= image_tag "books.png", :alt => "Books", :title => "Books", :size => "920x120", :id => "banner" %>
+<div id="events">
+	<h2>Próximos Eventos</h2>
+	<ul>
+		<li>
+			<% link_to "event_path(event)" do %>
+				<small>23 de Nov, 2009</small>
+				<h3>Lorem sit amet dolen ipsum</h3>
+			<% end %>
+		</li>
+		<li>
+			<% link_to "event_path(event)" do %>
+				<small>23 de Nov, 2009</small>
+				<h3>Lorem sit amet dolen ipsum</h3>
+			<% end %>
+		</li>
+		<li>
+			<% link_to "event_path(event)" do %>
+				<small>23 de Nov, 2009</small>
+				<h3>Lorem sit amet dolen ipsum</h3>
+			<% end %>
+		</li>
+		<li>
+			<% link_to "event_path(event)" do %>
+				<small>23 de Nov, 2009</small>
+				<h3>Lorem sit amet dolen ipsum</h3>
+			<% end %>
+		</li>
+	</ul>
+</div>
+<div id="births">
+	<h2>Aniversáriantes</h2>
+</div>
+<div id="procedures">
+	<h2>Procedimentos</h2>
+</div>

@@ -42,13 +42,13 @@ class PagesControllerTest < ActionController::TestCase
       ActionMailer::Base.delivery_method = :test
       ActionMailer::Base.perform_deliveries = true
       ActionMailer::Base.deliveries = []
-      Factory.create(:page, :name => 'Contact')
-      post :contact, 'contact' => {'name' => "Ricardo", 'email' => "dev.dburns@gmail.com", 'message' => 'Hello!'}
+      Factory.create(:page, :name => 'Contato')
+      post :contato, 'contact' => {'name' => "Ricardo", 'email' => "dev.dburns@gmail.com", 'message' => 'Hello!'}
     end
 
     should "render the contact's template" do
-      get "contact"
-      assert_template "contact"
+      get "contato"
+      assert_template "contato"
     end
 
     should "send contact e-mail" do
