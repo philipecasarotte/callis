@@ -1,0 +1,27 @@
+<h1>Listando Eventos</h1>
+
+<table id="table">
+	<thead>
+		<tr>
+      		<th>Nome</th>
+			<th>Texto</th>
+      		<th>Acontece em</th>
+		</tr>
+	</thead>
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+		<td><%= event.body.summary 100 %></td>
+        <td><%= l(event.happens_on, :format => :long) %></td>
+
+		<td><%= link_to t(:edit), edit_object_url(event) %></td>
+        <td><%= link_to t(:destroy), object_url(event), :confirm => t(:are_you_sure), :method => :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br />
+<%= link_to "Novo Evento", new_admin_event_url %>
+
+<%= render :partial => '/admin/scaffold/data_table' %>

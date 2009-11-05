@@ -3,17 +3,23 @@
 <table id="table">
 	<thead>
 		<tr>
+			<th></th>
 			<th>Login</th>
 			<th><%=t :user_name %></th>
 			<th><%=t :user_email %></th>
+			<th>Departamento</th>
+			<th>Telefone</th>
 		</tr>
 	</thead>
 	<tbody>
 		<%- @users.each do |user|%>
 			<tr>
+				<td><%= image_tag user.avatar.url(:thumb) if user.avatar.url.present? %></td>
 				<td><%=h user.login %></td>
 				<td><%=h user.name %></td>
 				<td><%=h user.email %></td>
+				<td><%= user.department.name rescue "" %></td>
+				<td><%= user.telephone %></td>
 
 				<td><%=link_to t(:edit), edit_object_url(user) %></td>
 				<td><%=link_to t(:destroy), object_url(user), :confirm => t(:are_you_sure), :method => :delete %></td>

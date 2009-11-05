@@ -1,10 +1,12 @@
 <ul id="menu">
+	<li><%= link_to "Departamentos", admin_departments_path %></li>
 	<li>
-		<%= link_to t(:menu_users), admin_users_path %>
+		<%= link_to "Funcionários", admin_users_path %>
 		<ul>
 			<li><%= link_to t(:menu_users), admin_users_path %></li>
 			<li><%= link_to t(:menu_admins), admin_users_path(:role => 'admin')  %></li>
 		</ul>
 	</li>
 	<li><%= link_to t(:menu_pages), admin_pages_path %></li>
+	<li><%= link_to "Eventos", admin_events_path %></li>
 </ul>

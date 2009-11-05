@@ -4,6 +4,8 @@ class PagesController < ApplicationController
 
   def index
     @pages = Page.main_pages
+    @users = User.by_month(Date.today.month)
+    @events = Event.upcoming(:limit => 4)
   end
 
   def contato

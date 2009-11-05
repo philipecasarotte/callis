@@ -1,0 +1,11 @@
+<ul id="events" class="full">
+<% @events.each do |event| %>	
+	<li>
+		<% link_to event_path(event.permalink) do %>
+			<small><%= l(event.happens_on, :format => :long) %></small>
+			<h3><%= event.name %></h3>
+			<%= event.body.summary 450 %>
+		<% end %>
+	</li>
+<% end %>
+</ul>

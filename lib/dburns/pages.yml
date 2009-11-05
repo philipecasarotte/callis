@@ -1,27 +1,55 @@
-contact:
-  name: "Contact"
-  body: "Coming soon"
-  permalink: "contact"
+home:
+  id: 7
+  name: "Home"
+  body: "Em Breve"
+  permalink: "home"
   parent:
   is_protected: 1
 
-page_not_found:
-  name: "Page Not Found"
-  body: "Coming soon"
+procedimentos:
+  id: 6
+  name: "Procedimentos"
+  body: "Em Breve"
+  permalink: "procedimentos"
+  parent:
+  is_protected: 1
+
+eventos:
+  id: 5
+  name: "Eventos"
+  body: "Em Breve"
+  permalink: "eventos"
+  parent:
+  is_protected: 1
+
+aniversariantes:
+  id: 4
+  name: "Aniversariantes"
+  body: "Em Breve"
+  permalink: "aniversariantes"
+  parent:
+  is_protected: 1
+
+pagina_nao_encontrada:
+  id: 3
+  name: "Página não Encontrada"
+  body: "Em Breve"
   permalink: "404"
   parent:
   is_protected: 1
 
-unexpected_error:
+erro_inesperado:
+  id: 2
   name: "Unexpected Error"
-  body: "Coming soon"
+  body: "Em Breve"
   permalink: "500"
   parent:
   is_protected: 1
 
-unprocessable_entity:
-  name: "Unprocessable Entity"
-  body: "Coming soon"
+entidade_desconhecida:
+  id: 1
+  name: "Entidade Desconhecida"
+  body: "Em Breve"
   permalink: "422"
   parent:
   is_protected: 1

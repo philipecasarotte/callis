@@ -28,9 +28,9 @@
 				<p>Intranet Editora Callis | <%= link_to "Administrativo", admin_root_path %></p>
 				<ul>
 					<li><%= link_to "Home", root_path %></li>
-					<li><%= link_to "Procedimentos", "procedures_path" %></li>
-					<li><%= link_to "Eventos", "events_path" %></li>
-					<li><%= link_to "Aniversáriantes", "users_path" %></li>												
+					<li><%= link_to "Procedimentos", procedures_path %></li>
+					<li><%= link_to "Eventos", events_path %></li>
+					<li><%= link_to "Aniversáriantes", users_path %></li>												
 				</ul>
 			</div>
 			<% [:error, :notice].each do |message| %>

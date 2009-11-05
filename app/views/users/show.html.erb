@@ -1,0 +1,10 @@
+<h1><%= @user.name %><small><%= "#{@user.age} anos" %></small></h1>
+<%= image_tag @user.avatar.url(:big) if @user.avatar.url.present? %>
+<dl>
+	<dt>Departamento</dt>
+	<dd><%= @user.department.name rescue "" %></dd>
+	<dt>Nascimento</dt>
+	<dd><%= l(@user.birthday, :format => :long) %></dd>
+	<dt>Telefone/Ramal</dt>
+	<dd><%= @user.telephone %></dd>
+</dl>

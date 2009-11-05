@@ -1,0 +1,23 @@
+<h1><%= t(:listing) %> Departamentos</h1>
+
+<table id="table">
+	<thead>
+		<tr>
+			<th>Nome</th>
+		</tr>
+	</thead>
+	<tbody>
+		<%- @departments.each do |department|%>
+			<tr>
+				<td><%=h department.name %></td>
+				
+				<td><%=link_to t(:edit), edit_object_url(department) %></td>
+				<td><%=link_to t(:destroy), object_url(department), :confirm => t(:are_you_sure), :method => :delete %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= link_to "Novo Departamento", new_object_url %>
+
+<% data_table %>

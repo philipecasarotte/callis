@@ -9,10 +9,20 @@ class User < ActiveRecord::Base
   end
 
   has_and_belongs_to_many :roles
+  
+  belongs_to :department
 
   validates_presence_of :name
 
   named_scope :admins, :include => :roles, :conditions => "roles.name = 'admin'"
+  
+  default_scope :order => "name ASC"
+  
+  has_attached_file :avatar,
+                    :styles => { :thumb => "70x80#", :list => "120x140#", :big => "420x580>" },
+                    :path => PAPERCLIP_PATH,
+                    :url => PAPERCLIP_URL,
+                    :default_url => ""
   
   # has_role? simply needs to return true or false whether a user has a role or not.  
   # It may be a good idea to have "admin" roles return true always
@@ -20,6 +30,22 @@ class User < ActiveRecord::Base
     @_list ||= self.roles.collect(&:name)
     return true if @_list.include?("admin")
     (@_list.include?(role_in_question.to_s) )
+  end
+  
+  def age
+    now = Date.today
+    year = now.year - birthday.year if birthday
+    
+    if (birthday + year.year) > now
+      year = year - 1
+    else
+      year
+    end
+  end
+  
+  private
+  def self.by_month(month)
+    all(:conditions => ["MONTH(birthday) = ?", month])
   end
   
 end

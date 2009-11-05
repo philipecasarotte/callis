@@ -1,7 +1,15 @@
 <% f.inputs do %>
+	<p>
+	  <%= f.label :avatar, "Foto" %>
+	  <%= f.file_field :avatar %>
+	</p>
 	<%= f.input :login %>
 	<%= f.input :name %>
 	<%= f.input :email %>
+	<%= f.label :birthday, "Aniversário" %>
+	<%= f.date_select :birthday, :start_year => 1930 %>
+	<%= f.input :telephone, :label => "Telefone/Ramal" %>
+	<%= f.input :department, :label => "Departamento" %>
 	<%= f.input :password %>
 	<%= f.input :password_confirmation %>
 	<%= f.input :roles, :as => :check_boxes %>

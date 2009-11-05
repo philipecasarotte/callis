@@ -2,35 +2,48 @@
 <div id="events">
 	<h2>Próximos Eventos</h2>
 	<ul>
+	<% @events.each do |event| %>
 		<li>
-			<% link_to "event_path(event)" do %>
-				<small>23 de Nov, 2009</small>
-				<h3>Lorem sit amet dolen ipsum</h3>
+			<% link_to event_path(event.permalink) do %>
+				<small><%= l(event.happens_on, :format => :short) %></small>
+				<h3><%= event.name.summary 30 %></h3>
 			<% end %>
 		</li>
-		<li>
-			<% link_to "event_path(event)" do %>
-				<small>23 de Nov, 2009</small>
-				<h3>Lorem sit amet dolen ipsum</h3>
-			<% end %>
-		</li>
-		<li>
-			<% link_to "event_path(event)" do %>
-				<small>23 de Nov, 2009</small>
-				<h3>Lorem sit amet dolen ipsum</h3>
-			<% end %>
-		</li>
-		<li>
-			<% link_to "event_path(event)" do %>
-				<small>23 de Nov, 2009</small>
-				<h3>Lorem sit amet dolen ipsum</h3>
-			<% end %>
-		</li>
+	<% end %>
 	</ul>
 </div>
 <div id="births">
 	<h2>Aniversáriantes</h2>
+<% if @users.any? %>
+	<ul>
+	<% @users.each do |user| %>	
+		<li>
+			<% link_to user_path(user) do %>
+				<%= image_tag user.avatar.url(:thumb), :size => "70x80" if user.avatar.url.present? %>
+				<h3><%= user.name %></h3>
+				<% if user.birthday.present? %>	
+					<big><%= l(user.birthday, :format => :short) %></big>
+					<small><%= "#{user.age} anos" if user.birthday.present? %></small>
+				<% end %>
+			<% end %>
+		</li>
+	<% end %>
+	</ul>
+<% else %>
+	Nenhum aniversáriante<br/>
+	no mês de <%= l(Date.today, :format => :only_month) %>
+<% end %>
 </div>
 <div id="procedures">
 	<h2>Procedimentos</h2>
+	<% form_tag search_procedures_path, :method => :get do %>
+		<%= text_field_tag "q", params[:q] || "digite aqui sua palavra-chave" %>
+		<%= submit_tag("Buscar", :class => "submit") %>
+	<% end %>
+	<h2>Últimos Cadastrados</h2>
+	<ul>
+		<li><%= link_to "Lorem ipsum dolor sit amet, consectetur adipisicing elit".summary(50), "#" %></li>
+		<li><%= link_to "Lorem ipsum dolor sit amet, consectetur adipisicing elit".summary(50), "#" %></li>
+		<li><%= link_to "Lorem ipsum dolor sit amet, consectetur adipisicing elit".summary(50), "#" %></li>				
+	</ul>
 </div>

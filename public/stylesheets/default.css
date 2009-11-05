@@ -4,16 +4,21 @@ img {border:none;}
 a {color:#00CCCC;text-decoration:none;}
 a:hover {text-decoration:underline;}
 
-h1 {}
+p {margin-bottom:14px;}
+
+h1 {font-size:42px;color:black;font-weight:normal;padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid #C7C7C7;}
+h1 small {float:right;color:#C7C7C7;}
+h1 small.link {font-size:14px;margin-top:15px;}
+h1 small.select {color:#00CCCC;font-size:14px;margin-top:15px;}
 h2 {font-size:28px;font-weight:normal;border-bottom:1px solid #C7C7C7;margin-bottom:10px;padding-bottom:10px;}
 h3 {font-size:16px;}
 
-body {background:white url(../images/bg/body.gif) repeat-x;color:#C7C7C7;font:12px Arial, Verdana, Tahoma, sans-serif;}
+body {background:white url(../images/bg/body.gif) repeat-x;color:black;font:12px Arial, Verdana, Tahoma, sans-serif;}
 
 #main {margin:0 auto;width:920px;}
 
 /*Top*/
-#top {border-bottom:1px solid #C7C7C7;margin-bottom:20px;padding-bottom:20px;height:140px;}
+#top {border-bottom:1px solid #C7C7C7;color:#C7C7C7;margin-bottom:20px;padding-bottom:20px;height:140px;}
 #top img {float:left;}
 #top p {text-align:right;margin:15px 0 105px 0;}
 #top ul {float:right;}
@@ -24,7 +29,7 @@ body {background:white url(../images/bg/body.gif) repeat-x;color:#C7C7C7;font:12
 #banner {border-bottom:1px solid #C7C7C7;margin-bottom:20px;padding-bottom:20px;}
 
 /*Home*/
-#events {float:left;width:350px;margin-right:20px;}
+#events {float:left;width:350px;margin-right:20px;color:#C7C7C7;}
 #events li {border-bottom:1px solid #C7C7C7;margin-bottom:10px;list-style:none;height:40px;}
 #events li a {color:black;}
 #events li a:hover {color:#00CCCC;text-decoration:none;}
@@ -32,9 +37,46 @@ body {background:white url(../images/bg/body.gif) repeat-x;color:#C7C7C7;font:12
 #events li small {font-size:12px;float:left;width:100px;border-right:1px solid #C7C7C7;margin-right:10px;padding:10px 10px 0 0;height:20px;}
 #events li h3 {padding-top:8px;}
 
-#births {float:left;width:250px;margin-right:20px;}
+#births {float:left;width:250px;margin-right:20px;color:#C7C7C7;}
+#births li {margin-bottom:10px;list-style:none;height:90px;}
+#births li a:hover {text-decoration:none;}
+#births li a:hover img {border-color:#00CCCC;}
+#births li a:hover h3 {color:#00CCCC;}
+#births li a:hover small,
+#births li a:hover big {color:black;}
+#births li img {float:left;margin-right:10px;border:solid 3px white;}
+#births li h3 {color:black;font-size:14px;}
+#births li big, 
+#births li small {display:block;}
+#births li big {font-style:italic;color:#999;font-size:14px;}
+#births li small {color:#C7C7C7;font-size:14px;}
 
-#procedures {float:right;width:280px;}
+#procedures {float:right;width:280px;color:#C7C7C7;}
+#procedures form {float:left;width:280px;margin-bottom:20px;}
+#procedures input {height:30px;width:197px;border:none;background-color:#C7C7C7;float:left;color:#999;font-size:13px;font-style:italic;padding-left:3px;}
+#procedures input.submit {height:30px;width:80px;border:none;background-color:#00CCCC;float:left;color:white;font-size:16px;}
+#procedures li {border-bottom:1px solid #C7C7C7;margin-bottom:10px;list-style:none;height:20px;font-weight:bold;}
+#procedures li a {color:black;}
+#procedures li a:hover {color:#00CCCC;text-decoration:none;}
+
+/*Events*/
+#events.full {float:left;width:920px;}
+#events.full li {border-bottom:1px solid #C7C7C7;margin-bottom:10px;list-style:none;height:130px;}
+#events.full li small {float:none;border:none;font-size:18px;margin:0;padding:0;}
+small.event {display:block;font-size:18px;color:#00CCCC;margin-bottom:15px;}
+#events.full li h3 {font-size:24px;margin-bottom:10px;}
+
+/*Users*/
+#births.full {float:left;width:920px;}
+#births.full li {display:inline;}
+#births.full li a {display:block;padding:20px;float:left;width:260px;height:150px;background-color:#C7C7C7;margin:3px;}
+#births.full li.odd a {background-color:white;}
+#births.full li a:hover {background-color:black;color:white;}
+#births.full li a:hover small,
+#births.full li a:hover big {color:white;}
+#births.full li img {border-color:#C7C7C7;}
 
 /*Footer*/
-#footer {float:left;border-top:1px solid #C7C7C7;margin-top:20px;padding-top:20px;text-align:center;width:920px;}
+#footer,
+#navigation {float:left;border-top:1px solid #C7C7C7;margin-top:20px;padding:20px 0;text-align:center;width:920px;}
+#navigation {text-align:right;}

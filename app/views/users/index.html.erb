@@ -1,0 +1,22 @@
+<h1>
+	Aniversáriantes<%= " &raquo; #{to_month(params[:mes])}" if params[:mes] %>
+	<small class="select">
+		<%= label :mes, "Selecione um" %>
+		<%= date_select(:mes, :mes, :discard_year => true, :discard_day => true, :prompt => "Mês") %>
+	</small>
+</h1>
+<ul id="births" class="full">
+<% @users.each do |user| %>	
+	<li <%= cycle("", "class='odd'") %>>
+		<% link_to user_path(user) do %>
+			<%= image_tag user.avatar.url(:list), :size => "" if user.avatar.url.present? %>
+			<h3><%= user.name %></h3>
+			<% if user.birthday.present? %>	
+				<big><%= l(user.birthday, :format => :short) %></big>
+				<small><%= "#{user.age} anos" if user.birthday.present? %></small>
+			<% end %>
+		<% end %>
+	</li>
+<% end %>
+</ul>
+<%= javascript "users/by_month" %>

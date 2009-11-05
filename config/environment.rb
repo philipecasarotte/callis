@@ -79,6 +79,9 @@ Rails::Initializer.run do |config|
   SITE_URL = "http://www.#{SITE_DOMAIN}/"
   SITE_EMAIL = "contact@#{SITE_DOMAIN}"
   SITE_META_KEYWORDS = ""
+  
+  PAPERCLIP_PATH = ":rails_root/public/system/:class/:id/:style/:basename.:extension"
+  PAPERCLIP_URL = "/system/:class/:id/:style/:basename.:extension"
 
   $VERBOSE = old_verbose
 end
