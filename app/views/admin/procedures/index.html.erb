@@ -1,0 +1,30 @@
+<h1>Listando Procedimentos</h1>
+
+<table id="table">
+	<thead>
+		<tr>
+      		<th>Nome</th>
+			<th>Departamento</th>
+			<th>Sub Departamento</th>
+      		<th>Quem faz?</th>
+		</tr>
+	</thead>
+  <tbody>
+    <% @procedures.each do |procedure| %>
+      <tr>
+        <td><%= procedure.name %></td>
+		<td><%= procedure.department.name %></td>
+        <td><%= procedure.department_division %></td>
+		<td><%= procedure.user.name %></td>
+
+		<td><%= link_to t(:edit), edit_object_url(procedure) %></td>
+        <td><%= link_to t(:destroy), object_url(procedure), :confirm => t(:are_you_sure), :method => :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br />
+<%= link_to "Novo Procedimento", new_admin_procedure_url %> |
+<%= link_to t(:reorder), reorder_admin_procedures_url %>
+
+<%= render :partial => '/admin/scaffold/data_table' %>

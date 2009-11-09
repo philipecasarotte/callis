@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :roles
   
   belongs_to :department
+  has_many :procedures
 
   validates_presence_of :name
 

@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :departments, :as => :departamentos
     admin.resources :users, :as => :aniversariantes
     admin.resources :events, :as => :eventos
-    admin.resources :procedures, :as => :procedimentos
+    admin.resources :procedures, :as => :procedimentos, :collection=>{ :reorder=>:get, :order=>:post }
     admin.root :controller => 'pages'
   end
 

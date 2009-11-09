@@ -1,0 +1,25 @@
+<% f.inputs  do %>
+	<%= f.input :name %>
+	<%= f.input :user %>
+	<%= f.input :department, :label => "Departamento" %>
+	<%= f.input :department_division, :label => "Sub Processo" %>
+	<%= f.input :periodicity, :label => "Periodicidade" %>
+	<li>
+	  <%= f.label :body, "Cuidados" %>
+	  <%= fckeditor_textarea "procedure", "warning", :height => "200px" %>
+	</li>
+	<li>
+	  <%= f.label :body, "Local na Callis" %>
+	  <%= fckeditor_textarea "procedure", "place", :height => "200px" %>
+	</li>
+	<li>
+	  <%= f.label :body, "Etapas" %>
+	  <%= fckeditor_textarea "procedure", "steps", :height => "200px" %>
+	</li>
+	<li>
+	  <%= f.label :body, "Passo-a-Passo" %>
+	  <%= fckeditor_textarea "procedure", "explanation", :height => "400px" %>
+	</li>
+<% end -%>
+
+<%= render :partial => "/admin/meta_tags/form", :locals => { :f => f } %>
