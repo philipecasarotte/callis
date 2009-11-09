@@ -9,10 +9,11 @@
 			<th><%=t :user_email %></th>
 			<th>Departamento</th>
 			<th>Telefone</th>
+			<th>Administrador?</th>
 		</tr>
 	</thead>
 	<tbody>
-		<%- @users.each do |user|%>
+	 	<% @users.each do |user| %>
 			<tr>
 				<td><%= image_tag user.avatar.url(:thumb) if user.avatar.url.present? %></td>
 				<td><%=h user.login %></td>
@@ -20,6 +21,7 @@
 				<td><%=h user.email %></td>
 				<td><%= user.department.name rescue "" %></td>
 				<td><%= user.telephone %></td>
+				<td><%= user.has_role?("admin")? "Sim" : "Não" %></td>
 
 				<td><%=link_to t(:edit), edit_object_url(user) %></td>
 				<td><%=link_to t(:destroy), object_url(user), :confirm => t(:are_you_sure), :method => :delete %></td>

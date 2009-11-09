@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
 
   validates_presence_of :name
 
-  named_scope :admins, :include => :roles, :conditions => "roles.name = 'admin'"
+  named_scope :admins, :include => :roles, :conditions => ["`roles`.name = ?", "admin"]
   
   default_scope :order => "name ASC"
   
