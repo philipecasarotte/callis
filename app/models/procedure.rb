@@ -9,5 +9,6 @@ class Procedure < ActiveRecord::Base
 
   has_permalink :name, :update => true
   
-  default_scope :order => "position"
+  named_scope :by_date, :order => "created_at DESC"
+  named_scope :by_position, :order => "position"
 end

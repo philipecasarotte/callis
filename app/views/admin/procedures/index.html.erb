@@ -15,7 +15,7 @@
         <td><%= procedure.name %></td>
 		<td><%= procedure.department.name %></td>
         <td><%= procedure.department_division %></td>
-		<td><%= procedure.user.name %></td>
+		<td><%= procedure.user.name rescue "" %></td>
 
 		<td><%= link_to t(:edit), edit_object_url(procedure) %></td>
         <td><%= link_to t(:destroy), object_url(procedure), :confirm => t(:are_you_sure), :method => :delete %></td>

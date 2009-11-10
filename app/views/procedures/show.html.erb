@@ -1,0 +1,37 @@
+<div id="print">
+	<h1>Procedimentos &raquo; <%= @procedure.name %></h1>
+	<div id="procedure_page">
+		<div id="column">
+			<div id="details">
+				<h2>Informações Gerais</h2>
+				<dl>
+					<dt>Departamento</dt>
+					<dd><%= @procedure.department.name %></dd>
+					<dt>Sub Processo</dt>
+					<dd><%= @procedure.department_division %></dd>
+					<dt>Quem faz?</dt>
+					<dd><%= @procedure.user.name %></dd>
+					<dt>Periodicidade</dt>
+					<dd><%= @procedure.periodicity %></dd>
+				</dl>
+			</div>
+			<div id="place">
+				<h2>Local na callis</h2>
+				<dd><%= @procedure.place %></dd>
+			</div>
+			<div id="warnings">
+				<h2>Cuidados</h2>
+				<dd><%= @procedure.warning %></dd>
+			</div>
+		</div>
+		<div id="explanation">
+			<h2>Passo a Passo</h2>
+			<%= @procedure.explanation %>
+		</div>
+		<div id="steps">
+			<h2>Etapas</h2>
+			<%= @procedure.steps %>
+		</div>
+	</div>
+</div>
+<div id="navigation"><%= link_to_function "Imprimir", "window.print();", :class => "print" %><%= link_to "&laquo; Ver Todos os Procedimentos", procedures_path %></div>

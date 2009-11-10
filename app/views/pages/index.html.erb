@@ -36,14 +36,11 @@
 </div>
 <div id="procedures">
 	<h2>Procedimentos</h2>
-	<% form_tag search_procedures_path, :method => :get do %>
-		<%= text_field_tag "q", params[:q] || "digite aqui sua palavra-chave" %>
-		<%= submit_tag("Buscar", :class => "submit") %>
-	<% end %>
+	<%= render :partial => 'procedures/search' %>
 	<h2>Últimos Cadastrados</h2>
 	<ul>
-		<li><%= link_to "Lorem ipsum dolor sit amet, consectetur adipisicing elit".summary(50), "#" %></li>
-		<li><%= link_to "Lorem ipsum dolor sit amet, consectetur adipisicing elit".summary(50), "#" %></li>
-		<li><%= link_to "Lorem ipsum dolor sit amet, consectetur adipisicing elit".summary(50), "#" %></li>				
+	<% @procedures.each do |procedure| %>		
+		<li><%= link_to procedure.name.summary(50), procedure_path(procedure.permalink) %></li>
+	<% end %>				
 	</ul>
 </div>

@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   default_scope :order => "name ASC"
   
   has_attached_file :avatar,
-                    :styles => { :thumb => "70x80#", :list => "120x140#", :big => "420x580>" },
+                    :styles => { :thumb => "70x80#", :list => "120x140#", :big => "220x240#" },
                     :path => PAPERCLIP_PATH,
                     :url => PAPERCLIP_URL,
                     :default_url => ""

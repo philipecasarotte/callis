@@ -1,0 +1,27 @@
+@media print { 
+	* {font:12px Arial, Verdana, Tahoma, sans-serif;margin:0;padding:0;outline:none;}
+	
+	h1 {font-size:28px;color:black;font-weight:normal;padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid #C7C7C7;margin:0;}
+	h2 {font-size:18px;font-weight:normal;border-bottom:1px solid #C7C7C7;margin-bottom:10px;padding-bottom:10px;}
+	h3 {font-size:14px;}
+	
+	p {margin-bottom:14px;}
+
+	ul {margin:0 0 14px 40px;}
+	
+	#top,
+	#footer,
+	#navigation {display:none;}
+
+	#procedure_page {position:relative;float:left;width:100%;}
+	#procedure_page #column {float:right;width:165px;}
+	#procedure_page #steps,
+	#procedure_page #explanation {float:left;width:420px;border:solid 1px #C7C7C7;padding:20px;margin-bottom:20px;}
+	#procedure_page #warnings,
+	#procedure_page #place,
+	#procedure_page #details {float:right;width:165px;border:solid 1px #C7C7C7;padding:20px;font-size:16px;margin-bottom:20px;}
+	#procedure_page #warnings,
+	#procedure_page #place {font-size:12px;}
+	#procedure_page #details dt {color:#C7C7C7;font-size:14px;}
+	#procedure_page #details dd {margin-bottom:10px;}
+}

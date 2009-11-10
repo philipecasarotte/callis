@@ -13,6 +13,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.pages '/paginas/:action', :controller => 'pages'
+  map.search '/procedimentos/busca', :controller => 'procedures', :action => 'search'
   map.resources :pages, :as => :paginas
   map.resources :users, :as => :aniversariantes
   map.resources :events, :as => :eventos, :collection => { :arquivo => :get } 

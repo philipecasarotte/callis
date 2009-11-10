@@ -6,10 +6,15 @@ a:hover {text-decoration:underline;}
 
 p {margin-bottom:14px;}
 
+ul {margin:0 0 14px 40px;}
+
 h1 {font-size:42px;color:black;font-weight:normal;padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid #C7C7C7;}
 h1 small {float:right;color:#C7C7C7;}
 h1 small.link {font-size:14px;margin-top:15px;}
 h1 small.select {color:#00CCCC;font-size:14px;margin-top:15px;}
+h1 form {float:right;width:280px;margin-top:10px;}
+h1 input {height:30px;width:197px;border:none;background-color:#C7C7C7;float:left;color:#999;font-size:13px;font-style:italic;padding-left:3px;}
+h1 input.submit {height:30px;width:80px;border:none;background-color:#00CCCC;float:left;color:white;font-size:16px;}
 h2 {font-size:28px;font-weight:normal;border-bottom:1px solid #C7C7C7;margin-bottom:10px;padding-bottom:10px;}
 h3 {font-size:16px;}
 
@@ -30,6 +35,7 @@ body {background:white url(../images/bg/body.gif) repeat-x;color:black;font:12px
 
 /*Home*/
 #events {float:left;width:350px;margin-right:20px;color:#C7C7C7;}
+#events ul {margin:0;}
 #events li {border-bottom:1px solid #C7C7C7;margin-bottom:10px;list-style:none;height:40px;}
 #events li a {color:black;}
 #events li a:hover {color:#00CCCC;text-decoration:none;}
@@ -38,6 +44,7 @@ body {background:white url(../images/bg/body.gif) repeat-x;color:black;font:12px
 #events li h3 {padding-top:8px;}
 
 #births {float:left;width:250px;margin-right:20px;color:#C7C7C7;}
+#births ul {margin:0;}
 #births li {margin-bottom:10px;list-style:none;height:90px;}
 #births li a:hover {text-decoration:none;}
 #births li a:hover img {border-color:#00CCCC;}
@@ -55,19 +62,20 @@ body {background:white url(../images/bg/body.gif) repeat-x;color:black;font:12px
 #procedures form {float:left;width:280px;margin-bottom:20px;}
 #procedures input {height:30px;width:197px;border:none;background-color:#C7C7C7;float:left;color:#999;font-size:13px;font-style:italic;padding-left:3px;}
 #procedures input.submit {height:30px;width:80px;border:none;background-color:#00CCCC;float:left;color:white;font-size:16px;}
+#procedures ul {margin:0;}
 #procedures li {border-bottom:1px solid #C7C7C7;margin-bottom:10px;list-style:none;height:20px;font-weight:bold;}
 #procedures li a {color:black;}
 #procedures li a:hover {color:#00CCCC;text-decoration:none;}
 
 /*Events*/
-#events.full {float:left;width:920px;}
+#events.full {float:left;width:920px;margin:0;}
 #events.full li {border-bottom:1px solid #C7C7C7;margin-bottom:10px;list-style:none;height:130px;}
 #events.full li small {float:none;border:none;font-size:18px;margin:0;padding:0;}
 small.event {display:block;font-size:18px;color:#00CCCC;margin-bottom:15px;}
 #events.full li h3 {font-size:24px;margin-bottom:10px;}
 
 /*Users*/
-#births.full {float:left;width:920px;}
+#births.full {float:left;width:920px;margin:0;}
 #births.full li {display:inline;}
 #births.full li a {display:block;padding:20px;float:left;width:260px;height:150px;background-color:#C7C7C7;margin:3px;}
 #births.full li.odd a {background-color:white;}
@@ -76,7 +84,37 @@ small.event {display:block;font-size:18px;color:#00CCCC;margin-bottom:15px;}
 #births.full li a:hover big {color:white;}
 #births.full li img {border-color:#C7C7C7;}
 
+#user {font-size:20px;margin:0;}
+#user img {border:solid 3px #00CCCC;float:left;margin-right:20px;}
+#user dt {color:#C7C7C7;font-size:16px;}
+#user dd {margin-bottom:20px;}
+
+/*Procedures*/
+#procedures.full {float:left;width:920px;margin:0;}
+#procedures.full li {display:inline;}
+#procedures.full li a {display:block;padding:20px;float:left;width:260px;height:50px;background-color:#C7C7C7;margin:3px;}
+#procedures.full li.odd a {background-color:white;}
+#procedures.full li a:hover {background-color:black;color:white;}
+#procedures.full li a:hover small,
+#procedures.full li a:hover big {color:white;}
+#procedures.full li img {border-color:#C7C7C7;}
+#procedures.full li a:hover h3 {color:#00CCCC;}
+#procedures.full li small {display:block;font-size:11px;margin-top:5px;}
+
+#procedure_page {position:relative;float:left;width:100%;}
+#procedure_page #column {float:right;width:265px;}
+#procedure_page #steps,
+#procedure_page #explanation {float:left;width:550px;border:solid 1px #C7C7C7;padding:20px;margin-bottom:20px;}
+#procedure_page #warnings,
+#procedure_page #place,
+#procedure_page #details {float:right;width:265px;border:solid 1px #C7C7C7;padding:20px;font-size:16px;margin-bottom:20px;}
+#procedure_page #warnings,
+#procedure_page #place {font-size:12px;}
+#procedure_page #details dt {color:#C7C7C7;font-size:14px;}
+#procedure_page #details dd {margin-bottom:10px;}
+
 /*Footer*/
 #footer,
 #navigation {float:left;border-top:1px solid #C7C7C7;margin-top:20px;padding:20px 0;text-align:center;width:920px;}
 #navigation {text-align:right;}
+#navigation a.print {float:left;color:black;font-weight:bold;}
