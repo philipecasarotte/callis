@@ -9,7 +9,7 @@
 	<%= f.label :birthday, "Aniversário" %>
 	<%= f.date_select :birthday, :start_year => 1930 %>
 	<%= f.input :telephone, :label => "Telefone/Ramal" %>
-	<%= f.input :department, :label => "Departamento" %>
+	<%= f.input :department, :label => "Departamento", :include_blank => false %>
 	<%= f.input :password %>
 	<%= f.input :password_confirmation %>
 	<%= f.input :roles, :as => :check_boxes %>
