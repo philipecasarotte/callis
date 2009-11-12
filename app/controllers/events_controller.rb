@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
   
+  before_filter :require_user
+  
   after_filter {|c| c.cache_page}
   
   def index

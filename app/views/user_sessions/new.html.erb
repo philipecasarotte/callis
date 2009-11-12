@@ -1,0 +1,12 @@
+<%= image_tag "books.png", :alt => "Books", :title => "Books", :size => "920x120", :id => "banner" %>
+<% form_for @user_session, :url => user_session_path do |f| %>
+	<%= f.error_messages %>
+	<%= f.label :login, "Username:" %>
+	<%= f.text_field :login %>
+
+	<%= f.label :password, "Password:" %>
+	<%= f.password_field :password %>
+
+	<%= submit_tag("Login")%>
+
+<% end %>

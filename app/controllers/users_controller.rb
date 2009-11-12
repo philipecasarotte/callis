@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   
+  before_filter :require_user
+  
   after_filter(:except => :index) {|c| c.cache_page}
   
   def index

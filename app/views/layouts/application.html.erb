@@ -32,7 +32,7 @@
 		<div id="main">
 			<div id="top">
 				<%= link_to image_tag("editora_callis.png", :alt => "Editora Callis", :title => "Editora Callis", :size => "300x137"), root_path %>
-				<p>Intranet Editora Callis | <%= link_to "Administrativo", admin_root_path %></p>
+				<p>Intranet Editora Callis | <%= link_to "Administrativo", admin_root_path %> | <%= link_to "Login/Logout", login_or_logout_path %></p>
 				<ul>
 					<li><%= link_to "Home", root_path %></li>
 					<li><%= link_to "Procedimentos", procedures_path %></li>
@@ -40,11 +40,11 @@
 					<li><%= link_to "Aniversáriantes", users_path %></li>												
 				</ul>
 			</div>
-			<% [:error, :notice].each do |message| %>
+			<!-- <% [:error, :notice].each do |message| %>
 				<% content_tag :div, :class => message do %>
 					<%= flash[message] %>
 				<% end if flash[message] %>
-			<% end %>
+			<% end %> -->
 			<%= yield  %>
 			<div id="footer">
 				Design and <%= link_to 'Ruby on Rails Development', 'http://www.philipecasarotte.com.br', :target => '_blank' %> by Philipe Casarotte<br/>

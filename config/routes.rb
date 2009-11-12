@@ -14,6 +14,10 @@ ActionController::Routing::Routes.draw do |map|
 
   map.pages '/paginas/:action', :controller => 'pages'
   map.search '/procedimentos/busca', :controller => 'procedures', :action => 'search'
+  map.login_or_logout "/autenticar", :controller => "user_sessions", :action => "check_status"
+  map.login 'login', :controller => "user_sessions", :action => "new"
+  map.logout 'logout', :controller => "user_sessions", :action => "destroy"
+  map.resource :user_session
   map.resources :pages, :as => :paginas
   map.resources :users, :as => :aniversariantes
   map.resources :events, :as => :eventos, :collection => { :arquivo => :get } 

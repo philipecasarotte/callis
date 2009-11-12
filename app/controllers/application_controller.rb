@@ -4,7 +4,7 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   helper_method :current_user_session, :current_user, :logged_in?
-
+  
   # See ActionController::RequestForgeryProtection for details
   protect_from_forgery
 
@@ -27,8 +27,11 @@ class ApplicationController < ActionController::Base
     def require_user
       unless current_user
         store_location
-        flash[:error] = I18n.t(:not_authorized)
-        redirect_to admin_login_url
+        if session[:return_to] =~ /admin/
+          redirect_to admin_login_url
+        else
+          redirect_to login_url
+        end
         return false
       end
     end
@@ -71,7 +74,6 @@ class ApplicationController < ActionController::Base
 
     # Uncomment this line to view the error pages in development mode
     # alias_method :rescue_action_locally, :rescue_action_in_public
-
 
 end
 
