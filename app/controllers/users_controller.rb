@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   
-  after_filter {|c| c.cache_page}
+  after_filter(:except => :index) {|c| c.cache_page}
   
   def index
     if params[:mes]
