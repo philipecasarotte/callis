@@ -1,4 +1,7 @@
 class ProceduresController < ApplicationController
+  
+  after_filter(:except => [:search, :index]) {|c| c.cache_page}
+  
   def index
     @procedures = Procedure.by_position
     get_page

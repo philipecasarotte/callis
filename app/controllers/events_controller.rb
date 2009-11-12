@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+  
+  after_filter {|c| c.cache_page}
+  
   def index
     @events = Event.upcoming
     get_page

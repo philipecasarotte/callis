@@ -1,5 +1,5 @@
 class Admin::UsersController < Admin::AdminController
-  
+  cache_sweeper :user_sweeper
   create.wants.html {redirect_to(collection_url)}
   update.wants.html {redirect_to(collection_url)}
 

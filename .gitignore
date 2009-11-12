@@ -8,7 +8,16 @@ db/*.sqlite3
 coverage
 doc/app/* 
 public/index.html
-public/pages/*
+public/eventos.html
+public/procedimentos.html
+public/aniversariantes.html
+public/paginas/*
+public/eventos
+public/eventos/*
+public/procedimentos
+public/procedimentos/*
+public/aniversariantes
+public/aniversariantes/*
 public/uploads
 public/uploads/*
 public/system

@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  
+  after_filter {|c| c.cache_page}
+  
   def index
     if params[:mes]
       @users = User.all(:conditions => "MONTH(birthday) = #{params[:mes]}")
