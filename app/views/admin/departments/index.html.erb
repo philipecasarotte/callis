@@ -12,7 +12,9 @@
 				<td><%=h department.name %></td>
 				
 				<td><%=link_to t(:edit), edit_object_url(department) %></td>
+				<% if current_user.login == "idenize" %>
 				<td><%=link_to t(:destroy), object_url(department), :confirm => t(:are_you_sure), :method => :delete %></td>
+				<% end %>
 			</tr>
 		<% end %>
 	</tbody>

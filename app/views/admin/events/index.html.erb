@@ -16,7 +16,9 @@
         <td><%= l(event.happens_on, :format => :long) %></td>
 
 		<td><%= link_to t(:edit), edit_object_url(event) %></td>
-        <td><%= link_to t(:destroy), object_url(event), :confirm => t(:are_you_sure), :method => :delete %></td>
+        <% if current_user.login == "idenize" %>
+			<td><%= link_to t(:destroy), object_url(event), :confirm => t(:are_you_sure), :method => :delete %></td>
+		<% end %>
       </tr>
     <% end %>
   </tbody>

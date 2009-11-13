@@ -18,7 +18,9 @@
 		<td><%= procedure.user.name rescue "" %></td>
 
 		<td><%= link_to t(:edit), edit_object_url(procedure) %></td>
-        <td><%= link_to t(:destroy), object_url(procedure), :confirm => t(:are_you_sure), :method => :delete %></td>
+        <% if current_user.login == "idenize" %>
+			<td><%= link_to t(:destroy), object_url(procedure), :confirm => t(:are_you_sure), :method => :delete %></td>
+		<% end %>
       </tr>
     <% end %>
   </tbody>
