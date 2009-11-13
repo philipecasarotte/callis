@@ -62,7 +62,7 @@ body {background:white url(../images/bg/body.gif) repeat-x;color:black;font:12px
 #procedures {float:right;width:280px;color:#C7C7C7;}
 #procedures form {float:left;width:280px;margin-bottom:20px;}
 #procedures input {height:30px;width:197px;border:none;background-color:#C7C7C7;float:left;color:#999;font-size:13px;font-style:italic;padding-left:3px;}
-#procedures input.submit {height:30px;width:80px;border:none;background-color:#00CCCC;float:left;color:white;font-size:16px;}
+#procedures input.submit {height:30px;width:80px;border:none;background-color:#00CCCC;float:left;color:white;font-size:16px;font-style:normal;}
 #procedures ul {margin:0;}
 #procedures li {border-bottom:1px solid #C7C7C7;margin-bottom:10px;list-style:none;height:20px;font-weight:bold;}
 #procedures li a {color:black;}
@@ -89,6 +89,12 @@ small.event {display:block;font-size:18px;color:#00CCCC;margin-bottom:15px;}
 #user img {border:solid 3px #00CCCC;float:left;margin-right:20px;}
 #user dt {color:#C7C7C7;font-size:16px;}
 #user dd {margin-bottom:20px;}
+
+#login {margin:0 auto;background-color:black;padding:40px;width:300px;}
+#login label {color:#00CCCC;font-size:16px;display:block;}
+#login h2 {color:white;}
+#login input {height:30px;width:300px;border:none;background-color:#C7C7C7;color:#999;font-size:13px;font-style:italic;padding-left:3px;margin-bottom:10px;}
+#login input.submit {height:30px;width:80px;border:none;background-color:#00CCCC;float:right;color:white;font-size:16px;font-style:normal;margin-top:15px;}
 
 /*Procedures*/
 #procedures.full {float:left;width:920px;margin:0;}

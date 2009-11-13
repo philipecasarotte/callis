@@ -1,12 +1,14 @@
 <%= image_tag "books.png", :alt => "Books", :title => "Books", :size => "920x120", :id => "banner" %>
-<% form_for @user_session, :url => user_session_path do |f| %>
+<% form_for @user_session, :url => user_session_path, :html => {:id => "login"} do |f| %>
+	<h2>Login</h2>
 	<%= f.error_messages %>
 	<%= f.label :login, "Username:" %>
 	<%= f.text_field :login %>
 
-	<%= f.label :password, "Password:" %>
+	<%= f.label :password, "Senha:" %>
 	<%= f.password_field :password %>
 
-	<%= submit_tag("Login")%>
-
+	<%= submit_tag("Login", :class => "submit")%>
+	<p class="break">&nbsp;</p>
 <% end %>
+<%= javascript "plugins/corner", "users/new" %>
