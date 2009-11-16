@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     @pages = Page.main_pages
     @users = User.by_month(Date.today.month)
     @events = Event.upcoming(:limit => 4)
-    @procedures = Procedure.by_date(:limit => 3)
+    @procedures = Procedure.all(:order => "created_at DESC", :limit => 3)
   end
 
   def contato
