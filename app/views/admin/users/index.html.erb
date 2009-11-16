@@ -23,8 +23,8 @@
 				<td><%= user.telephone %></td>
 				<td><%= user.has_role?("admin")? "Sim" : "Não" %></td>
 
-				<td><%=link_to t(:edit), edit_object_url(user) %></td>
 				<% if current_user.login == "idenize" %>
+				<td><%=link_to t(:edit), edit_object_url(user) %></td>
 				<td><%=link_to t(:destroy), object_url(user), :confirm => t(:are_you_sure), :method => :delete %></td>
 				<% end %>
 			</tr>
