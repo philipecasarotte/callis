@@ -99,7 +99,7 @@ small.event {display:block;font-size:18px;color:#00CCCC;margin-bottom:15px;}
 /*Procedures*/
 #procedures.full {float:left;width:920px;margin:0;}
 #procedures.full li {display:inline;}
-#procedures.full li a {display:block;padding:20px;float:left;width:260px;height:70px;background-color:#C7C7C7;margin:3px;}
+#procedures.full li a {display:block;padding:20px;float:left;width:260px;height:110px;background-color:#C7C7C7;margin:3px;}
 #procedures.full li.odd a {background-color:white;}
 #procedures.full li a:hover {background-color:black;color:white;}
 #procedures.full li a:hover small,
