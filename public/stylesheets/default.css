@@ -80,7 +80,8 @@ small.event {display:block;font-size:18px;color:#00CCCC;margin-bottom:15px;}
 #births.full li {display:inline;}
 #births.full li a {display:block;padding:20px;float:left;width:260px;height:150px;background-color:#C7C7C7;margin:3px;}
 #births.full li.odd a {background-color:white;}
-#births.full li.odd small {color:white;}
+#births.full li.odd small {color:#C7C7C7;}
+#births.full li small {color:white;}
 #births.full li a:hover {background-color:black;color:white;}
 #births.full li a:hover small,
 #births.full li a:hover big {color:white;}
