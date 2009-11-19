@@ -13,7 +13,7 @@
     <% @procedures.each do |procedure| %>
       <tr>
         <td><%= procedure.name %></td>
-		<td><%= procedure.department.name %></td>
+		<td><%= procedure.department.name rescue "" %></td>
         <td><%= procedure.department_division %></td>
 		<td><%= procedure.user.name rescue "" %></td>
 

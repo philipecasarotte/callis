@@ -6,11 +6,11 @@
 				<h2>Informações Gerais</h2>
 				<dl>
 					<dt>Departamento</dt>
-					<dd><%= @procedure.department.name %></dd>
+					<dd><%= @procedure.department.name rescue "" %></dd>
 					<dt>Sub Processo</dt>
 					<dd><%= @procedure.department_division %></dd>
 					<dt>Quem faz?</dt>
-					<dd><%= @procedure.user.name %></dd>
+					<dd><%= @procedure.user.name rescue "" %></dd>
 					<dt>Periodicidade</dt>
 					<dd><%= @procedure.periodicity %></dd>
 				</dl>
