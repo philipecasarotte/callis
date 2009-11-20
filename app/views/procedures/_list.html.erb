@@ -3,8 +3,8 @@
 	<li <%= cycle("", "class='odd'") %>>
 		<% link_to procedure_path(procedure.permalink) do %>
 			<h3><%= procedure.name %></h3>
-			<big>Departamento: <%= procedure.department.name %></big>
-			<small>Quem faz? <%= procedure.user.name %></small>
+			<big>Departamento: <%= procedure.department.name rescue "" %></big>
+			<small>Quem faz? <%= procedure.user.name rescue "" %></small>
 		<% end %>
 	</li>
 <% end %>
