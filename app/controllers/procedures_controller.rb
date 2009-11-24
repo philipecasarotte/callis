@@ -5,7 +5,7 @@ class ProceduresController < ApplicationController
   after_filter(:except => [:search, :index]) {|c| c.cache_page}
   
   def index
-    @procedures = Procedure.by_position
+    @procedures = Procedure.by_position.paginate(:page => params[:page], :per_page => 30)
     get_page
   end
   

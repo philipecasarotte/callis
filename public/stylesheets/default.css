@@ -124,6 +124,6 @@ small.event {display:block;font-size:18px;color:#00CCCC;margin-bottom:15px;}
 
 /*Footer*/
 #footer,
-#navigation {float:left;border-top:1px solid #C7C7C7;margin-top:20px;padding:20px 0;text-align:center;width:920px;}
-#navigation {text-align:right;}
+#navigation {float:left;border-top:1px solid #C7C7C7;margin-top:20px;padding:20px 0;text-align:center;width:920px;text-align:right;}
+#navigation.top {border-bottom:1px solid #C7C7C7;border-top:none;margin:0 0 20px 0;padding-top:0;}
 #navigation a.print {float:left;color:black;font-weight:bold;background:url(../images/print.gif) no-repeat;padding:10px 0 0 0;width:80px;height:50px;}

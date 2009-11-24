@@ -1,4 +1,10 @@
 <h1>Procedimentos
 	<%= render :partial => 'search' %>
 </h1>
+<div id="navigation" class="top">
+	<%= will_paginate @procedures %>
+</div>
 <%= render :partial => 'list' %>
+<div id="navigation">
+	<%= will_paginate @procedures %>
+</div>
