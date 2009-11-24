@@ -2,9 +2,9 @@
 	<%= render :partial => 'search' %>
 </h1>
 <div id="navigation" class="top">
-	<%= will_paginate @procedures %>
+	<%= will_paginate @procedures, :previous_label => "&laquo; Anterior", :next_label => "Próxima &raquo;" %>
 </div>
 <%= render :partial => 'list' %>
 <div id="navigation">
-	<%= will_paginate @procedures %>
+	<%= will_paginate @procedures, :previous_label => "&laquo; Anterior", :next_label => "Próxima &raquo;" %>
 </div>
