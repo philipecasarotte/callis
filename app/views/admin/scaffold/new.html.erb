@@ -2,7 +2,7 @@
 
 <%= error_messages_for @object.class.to_s.underscore.to_sym %>
 
-<% semantic_form_for(@object, :url => collection_url, :live_validations => true, :html => { :multipart => true }) do |f| %>
+<% semantic_form_for(@object, :url => collection_url, :live_validations => false, :html => { :multipart => true }) do |f| %>
 	<%= render :partial => "form", :locals => { :f => f } %>
 	<p class="submit"><%=submit_tag t(:create)%></p>
 <% end %>
