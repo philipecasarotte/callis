@@ -1,8 +1,8 @@
 class Mailer < ActionMailer::Base
   
-  #require 'tlsmail'
+  require 'tlsmail'
 
-  #Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
+  Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
   
   ActionMailer::Base.raise_delivery_errors = true
 
@@ -12,8 +12,8 @@ class Mailer < ActionMailer::Base
       :port => "587",
       :domain => SITE_DOMAIN,
       :authentication => :plain,
-      :user_name => "dev.dburns@gmail.com",
-      :password => "dev@1942!"
+      :user_name => "callisintranet@gmail.com",
+      :password => "editora@123"
   }
   
   def contact(params)
