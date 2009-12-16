@@ -2,7 +2,7 @@ class ProceduresController < ApplicationController
   
   before_filter :require_user
   
-  after_filter(:except => [:search, :index]) {|c| c.cache_page}
+  #after_filter(:except => [:search, :index]) {|c| c.cache_page}
   
   def index
     @procedures = Procedure.by_position.paginate(:page => params[:page], :per_page => 30)
