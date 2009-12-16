@@ -1,13 +1,13 @@
 # =============================================================================
 # CONFIGURE OS VALORES DE ACORDO COM SUA HOSPEDAGEM
 # =============================================================================
-set :user, "user"
-set :password, "password"
-set :host, "server_ip"
-set :domain, "domain.com"
-set :application, "app_name"
+set :user, "callis"
+set :password, "sillac10"
+set :host, "208.88.124.67"
+set :domain, "callis.com"
+set :application, "intranet"
 
-set :repository, "git://dburnsdesign.com/repos/mainline.git"
+set :repository, "git://github.com/philipecasarotte/callis.git"
 set :branch,     "origin/master"
 # =============================================================================
 # NAO MEXER DAQUI PARA BAIXO
@@ -16,7 +16,7 @@ role :web, host
 role :app, host
 role :db,  host
 
-set :deploy_to, "/home/#{user}" 
+set :deploy_to, "/home/www/#{user}" 
 
 set :scm, :git
 

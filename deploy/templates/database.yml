@@ -1,9 +1,9 @@
 production:
   adapter: mysql
   encoding: utf8
-  database: <%= application %>_production
-  username: <%= application %>_site
-  password: password
+  database: callis_production
+  username: root
+  password: sillac10
   host: localhost
 
 development:
