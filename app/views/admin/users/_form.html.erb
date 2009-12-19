@@ -7,7 +7,7 @@
 	<%= f.input :name %>
 	<%= f.input :email %>
 	<%= f.label :birthday, "Aniversário" %>
-	<%= f.date_select :birthday, :start_year => 1930 %>
+	<%= f.date_select :birthday, :start_year => 1930, :end_year => 2000 %>
 	<%= f.input :telephone, :label => "Telefone/Ramal" %>
 	<%= f.input :department, :label => "Departamento", :as => :radio %>
 	<%= f.input :password %>
