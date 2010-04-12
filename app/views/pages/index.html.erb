@@ -13,7 +13,7 @@
 	</ul>
 </div>
 <div id="births">
-	<h2>Aniversáriantes</h2>
+	<h2>Aniversariantes</h2>
 <% if @users.any? %>
 	<ul>
 	<% @users.each do |user| %>	
@@ -30,7 +30,7 @@
 	<% end %>
 	</ul>
 <% else %>
-	Nenhum aniversáriante<br/>
+	Nenhum aniversariante<br/>
 	no mês de <%= l(Date.today, :format => :only_month) %>
 <% end %>
 </div>
