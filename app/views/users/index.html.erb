@@ -1,5 +1,5 @@
 <h1>
-	Aniversáriantes<%= " &raquo; #{to_month(params[:mes])}" if params[:mes] %>
+	Aniversariantes<%= " &raquo; #{to_month(params[:mes])}" if params[:mes] %>
 	<small class="select">
 		<%= label :mes, "Selecione um" %>
 		<%= date_select(:mes, :mes, :discard_year => true, :discard_day => true, :prompt => "Mês") %>
