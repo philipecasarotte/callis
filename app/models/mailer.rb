@@ -8,16 +8,16 @@ class Mailer < ActionMailer::Base
 
   ActionMailer::Base.smtp_settings = {
       :tls => true,
-      :address => "smtp.gmail.com",
-      :port => "587",
+      :address => "mail.dburnsdesign.com",
+      :port => "465",
       :domain => SITE_DOMAIN,
       :authentication => :plain,
-      :user_name => "callisintranet@gmail.com",
-      :password => "editora@123"
+      :user_name => "webmaster@dburnsdesign.com",
+      :password => "Bundinha305@"
   }
   
   def contact(params)
-    @recipients = 'dev.dburns@gmail.com' 
+    @recipients = 'philipe@casarotte.com' 
     #@recipients = SITE_EMAIL
     @from = params[:email] if params[:email]
     @reply_to = params[:email] if params[:email]
